@@ -41,10 +41,8 @@ public class SearchDataService implements ISearchDataService{
 
         Map<String, Integer> wordCountUnsortedMap = DataReaderUtil.findDataWithCountValue();
         MapValueComparator mapValueComparator = new MapValueComparator(wordCountUnsortedMap);
-
         TreeMap<String,Integer> treeMap = new TreeMap<>(mapValueComparator);
         treeMap.putAll(wordCountUnsortedMap);
-
 
         Map<String,Integer> outputMap = new HashMap<>();
         int size = treeMap.size();
@@ -58,7 +56,6 @@ public class SearchDataService implements ISearchDataService{
             outputMap.put(entry.getKey(),entry.getValue());
             --count;
         }
-
         List<Map<String,Integer>> list = new ArrayList<>();
         list.add(outputMap);
         ResponseObject responseObject = new ResponseObject();

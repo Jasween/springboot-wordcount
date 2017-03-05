@@ -1,21 +1,16 @@
 package com.proj.util;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
-
-import static java.util.stream.Collectors.toMap;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by jasweensingh on 04/03/17.
  */
-@Component
 public class DataReaderUtil {
 
     private static final String FILE_PATH = "src/main/resources/data";
@@ -68,4 +63,5 @@ public class DataReaderUtil {
         return wordMap;
 
     }
+
 }
